@@ -1,0 +1,53 @@
+.css3(@key;@value) {
+  @{key}: @value;
+  -webkit-@{key}: @value;
+  -ms-@{key}: @value;
+  -moz-@{key}: @value;
+  -o-@{key}: @value;
+}
+
+.opacity(@per:1) {
+  @temp: @per*100;
+  opacity: @per;
+  filter: ~"alpha(opacity=@{temp})";
+}
+
+.position(@pos:absolute;@left:0;@top:0;@right:auto;@bottom:auto;@zIndex:0) {
+  position: @pos;
+  left: @left;
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  z-index: @zIndex;
+}
+
+.boderradis(@pix) {
+  border-radius: @pix;
+  -webkit-border-radius: @pix;
+  -moz-border-radius: @pix;
+  -ms-border-radius: @pix;
+  -o-border-radius: @pix;
+
+}
+
+.boxShadow(@style,@alpha:0.5) {
+  box-shadow: @style rgba(0, 0, 0,@alpha);
+  -webkit-box-shadow: @style rgba(0, 0, 0,@alpha);
+  -moz-box-shadow: @style rgba(0, 0, 0,@alpha);
+  -ms-box-shadow: @style rgba(0, 0, 0,@alpha);
+  -o-box-shadow: @style rgba(0, 0, 0,@alpha);
+
+}
+
+.transition(@attr:all;@time:1s;@timingFunction:ease-in;@delay:0s) {
+  transition: @arguments;
+  -webkit-transition: @arguments;
+  -moz-transition: @arguments;
+  -ms-transition: @arguments;
+  -o-transition: @arguments;
+}
+
+.animation(@name:bounceInLeft,@duration:1s,@time-function:linear,@delay:0s,@count:1,@fill-mode:both) {
+  -webkit-animation: @arguments;
+  animation: @arguments;
+}
