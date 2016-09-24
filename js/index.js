@@ -113,31 +113,7 @@ var indexRender = (function () {
                 }
                 document.documentElement.style.fontSize = winW / desW * 100 + 'px';
             }();
-
-            //music 处理：
-            (function () {
-                var oMusicBox = document.getElementById('music');
-                var oAudio = oMusicBox.getElementsByTagName('audio')[0];
-                window.setTimeout(function () {
-                    oAudio.volume = .5;
-                    oAudio.play();
-                    oAudio.loop = true;
-                    music.style.opacity = 1;
-                    music.className = 'music move';
-                    oAudio.addEventListener('canplay', function () {
-                    }, false);
-
-                }, 1000)
-                oMusicBox.addEventListener('click', function () {
-                    if (oAudio.paused) {
-                        oAudio.play();
-                        music.className = 'music move';
-                        return;
-                    }
-                    oAudio.pause();
-                    music.className = 'music';
-                }, false)
-            })();
+           
             //执行swiper
             sw();
 
