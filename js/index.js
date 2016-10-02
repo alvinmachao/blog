@@ -10,6 +10,9 @@ var personalRender = (function () {
         var mySwiper = new Swiper('.swiper-container', {
             direction: 'vertical',
             loop: true,
+            effect : 'flip',
+            preloadImages:false,
+            lazyLoading : true,
             onSlideChangeEnd: function (swiper) {
                 var slides = swiper.slides;
                 var trueTotal = slides.length - 2;
