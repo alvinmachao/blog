@@ -47,6 +47,11 @@
 	/**
 	 * Created by Alvin on 2016/11/7.
 	 */
+	/*
+	require('./css/reset.min.css');
+	require('./css/swiper.min.css');
+	require('./css/index.css');
+	*/
 	__webpack_require__(1);
 	__webpack_require__(2);
 
@@ -911,9 +916,7 @@
 	        var mySwiper = new Swiper('.swiper-container', {
 	            direction: 'vertical',
 	            loop: true,
-	            //effect : 'flip',
-	            //preloadImages:false,
-	            //lazyLoading : true,
+	            lazyLoading: true,
 	            onSlideChangeEnd: function (swiper) {
 	                var slides = swiper.slides;
 	                var trueTotal = slides.length - 2;
